@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">jk
+</head>
+<body>
+
+<div class="inputy">
+<input type="number" id="numbers"> Wpisz potęge</input>
+<input type="number" id="numbers^">Wpisz ile liczb </input>
+<button onclick="potegowanie()">klik</button>
+<div id="wynik">Wynik:</div>
+</div>
+
+
+
+    <script>
+function potegowanie(liczba1,liczba2){
+    let tablica = new Array(liczba1);
+    var liczba1 = document.getElementById("numbers").value
+    var liczba2 = document.getElementById("numbers^").value
+for(let i = 0; i < liczba2; i++){
+tablica[i] =Math.pow(liczba1, i);
+  
+}
+console.log(tablica)
+document.getElementById("wynik").textContent = tablica;
+}
+
+    </script>
+</body>
+</html>
